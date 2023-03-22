@@ -1,0 +1,1 @@
+Scaffold-DbContext "USER ID=JOR17_User36;PASSWORD=Test321;DATA SOURCE=94.56.229.181:3488/traindb" Oracle.EntityFrameworkCore -outputdir Models

@@ -17,6 +17,22 @@ namespace FreelanceProject.API.Controllers
             this.loginofService = loginofService;
         }
 
+        [HttpPost]
+        [Route("Auth")]
+        public IActionResult Auth([FromBody]Loginof loginof)
+        {
+            var token = loginofService.Auth(loginof);
+            if (token == null)
+            {
+                return Unauthorized();
+            }
+            else
+            {
+                return Ok(token);
+            }
+        }
+
+
         [HttpGet]
         [Route("GetById/{id}")]
         public Loginof GetById(int id) { return loginofService.GetById(id); }
@@ -31,6 +47,6 @@ namespace FreelanceProject.API.Controllers
         public void update(Loginof loginof) { loginofService.update(loginof); }
         [HttpPost]
         [Route("insert")]
-        public void insert(Loginof loginof) { loginofService.insert(loginof); }
+        public int insert(Loginof loginof) {  return loginofService.insert(loginof); }
     }
 }

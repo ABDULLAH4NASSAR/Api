@@ -2,7 +2,9 @@
 using FreelanceProject.Core.Service;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace FreelanceProject.API.Controllers
 {
@@ -14,6 +16,22 @@ namespace FreelanceProject.API.Controllers
         public AboutController(IAboutusofsService aboutusofsService)
         {
             this.aboutusofsService = aboutusofsService;
+        }
+
+        [Route("uploadImage")]
+        [HttpPost]
+        public Aboutusof UploadIMage()
+        {
+            var file = Request.Form.Files[0];
+            var fileName = Guid.NewGuid().ToString() + "_" + file.FileName;
+            var fullPath = Path.Combine("Images", fileName);
+            using (var stream = new FileStream(fullPath, FileMode.Create))
+            {
+                file.CopyTo(stream);
+            }
+            Aboutusof item = new Aboutusof();
+            item.Imageurl = fileName;
+            return item;
         }
         [HttpGet]
         [Route("GetById/{id}")]

@@ -93,3 +93,4 @@ C:\Users\A\source\repos\FreelanceProject.API\FreelanceProject.API\obj\Debug\netc
 C:\Users\A\source\repos\FreelanceProject.API\FreelanceProject.API\obj\Debug\netcoreapp3.1\FreelanceProject.API.dll
 C:\Users\A\source\repos\FreelanceProject.API\FreelanceProject.API\obj\Debug\netcoreapp3.1\FreelanceProject.API.pdb
 C:\Users\A\source\repos\FreelanceProject.API\FreelanceProject.API\obj\Debug\netcoreapp3.1\FreelanceProject.API.genruntimeconfig.cache
+C:\Users\A\source\repos\FreelanceProject.API\FreelanceProject.API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll

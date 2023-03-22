@@ -1,0 +1,16 @@
+C:\Users\A\source\repos\FreelanceProject.API\FreelanceProject.infra\bin\Debug\netcoreapp3.1\FreelanceProject.infra.deps.json
+C:\Users\A\source\repos\FreelanceProject.API\FreelanceProject.infra\bin\Debug\netcoreapp3.1\FreelanceProject.infra.runtimeconfig.json
+C:\Users\A\source\repos\FreelanceProject.API\FreelanceProject.infra\bin\Debug\netcoreapp3.1\FreelanceProject.infra.runtimeconfig.dev.json
+C:\Users\A\source\repos\FreelanceProject.API\FreelanceProject.infra\bin\Debug\netcoreapp3.1\FreelanceProject.infra.dll
+C:\Users\A\source\repos\FreelanceProject.API\FreelanceProject.infra\bin\Debug\netcoreapp3.1\FreelanceProject.infra.pdb
+C:\Users\A\source\repos\FreelanceProject.API\FreelanceProject.infra\bin\Debug\netcoreapp3.1\FreelanceProject.Core.dll
+C:\Users\A\source\repos\FreelanceProject.API\FreelanceProject.infra\bin\Debug\netcoreapp3.1\FreelanceProject.Core.pdb
+C:\Users\A\source\repos\FreelanceProject.API\FreelanceProject.infra\obj\Debug\netcoreapp3.1\FreelanceProject.infra.csproj.AssemblyReference.cache
+C:\Users\A\source\repos\FreelanceProject.API\FreelanceProject.infra\obj\Debug\netcoreapp3.1\FreelanceProject.infra.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\A\source\repos\FreelanceProject.API\FreelanceProject.infra\obj\Debug\netcoreapp3.1\FreelanceProject.infra.AssemblyInfoInputs.cache
+C:\Users\A\source\repos\FreelanceProject.API\FreelanceProject.infra\obj\Debug\netcoreapp3.1\FreelanceProject.infra.AssemblyInfo.cs
+C:\Users\A\source\repos\FreelanceProject.API\FreelanceProject.infra\obj\Debug\netcoreapp3.1\FreelanceProject.infra.csproj.CoreCompileInputs.cache
+C:\Users\A\source\repos\FreelanceProject.API\FreelanceProject.infra\obj\Debug\netcoreapp3.1\FreelanceProject.infra.csproj.CopyComplete
+C:\Users\A\source\repos\FreelanceProject.API\FreelanceProject.infra\obj\Debug\netcoreapp3.1\FreelanceProject.infra.dll
+C:\Users\A\source\repos\FreelanceProject.API\FreelanceProject.infra\obj\Debug\netcoreapp3.1\FreelanceProject.infra.pdb
+C:\Users\A\source\repos\FreelanceProject.API\FreelanceProject.infra\obj\Debug\netcoreapp3.1\FreelanceProject.infra.genruntimeconfig.cache

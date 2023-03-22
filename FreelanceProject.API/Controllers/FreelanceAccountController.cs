@@ -3,7 +3,9 @@ using FreelanceProject.Core.Service;
 using FreelanceProject.infra.Service;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace FreelanceProject.API.Controllers
 {
@@ -16,6 +18,23 @@ namespace FreelanceProject.API.Controllers
         {
             this.freelanceraccountofService = freelanceraccountofService;
         }
+
+        [Route("uploadImage")]
+        [HttpPost]
+        public Freelanceraccountof UploadIMage()
+        {
+            var file = Request.Form.Files[0];
+            var fileName = Guid.NewGuid().ToString() + "_" + file.FileName;
+            var fullPath = Path.Combine("Images", fileName);
+            using (var stream = new FileStream(fullPath, FileMode.Create))
+            {
+                file.CopyTo(stream);
+            }
+            Freelanceraccountof item = new Freelanceraccountof();
+            item.Image = fileName;
+            return item;
+        }
+
         [HttpGet]
         [Route("GetById/{id}")]
         public Freelanceraccountof GetById(int id) { return freelanceraccountofService.GetById(id); }

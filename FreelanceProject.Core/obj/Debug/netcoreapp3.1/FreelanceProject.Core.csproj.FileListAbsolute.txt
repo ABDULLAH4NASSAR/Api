@@ -1,0 +1,10 @@
+C:\Users\A\source\repos\FreelanceProject.API\FreelanceProject.Core\bin\Debug\netcoreapp3.1\FreelanceProject.Core.deps.json
+C:\Users\A\source\repos\FreelanceProject.API\FreelanceProject.Core\bin\Debug\netcoreapp3.1\FreelanceProject.Core.dll
+C:\Users\A\source\repos\FreelanceProject.API\FreelanceProject.Core\bin\Debug\netcoreapp3.1\FreelanceProject.Core.pdb
+C:\Users\A\source\repos\FreelanceProject.API\FreelanceProject.Core\obj\Debug\netcoreapp3.1\FreelanceProject.Core.csproj.AssemblyReference.cache
+C:\Users\A\source\repos\FreelanceProject.API\FreelanceProject.Core\obj\Debug\netcoreapp3.1\FreelanceProject.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\A\source\repos\FreelanceProject.API\FreelanceProject.Core\obj\Debug\netcoreapp3.1\FreelanceProject.Core.AssemblyInfoInputs.cache
+C:\Users\A\source\repos\FreelanceProject.API\FreelanceProject.Core\obj\Debug\netcoreapp3.1\FreelanceProject.Core.AssemblyInfo.cs
+C:\Users\A\source\repos\FreelanceProject.API\FreelanceProject.Core\obj\Debug\netcoreapp3.1\FreelanceProject.Core.csproj.CoreCompileInputs.cache
+C:\Users\A\source\repos\FreelanceProject.API\FreelanceProject.Core\obj\Debug\netcoreapp3.1\FreelanceProject.Core.dll
+C:\Users\A\source\repos\FreelanceProject.API\FreelanceProject.Core\obj\Debug\netcoreapp3.1\FreelanceProject.Core.pdb

@@ -3,7 +3,9 @@ using FreelanceProject.Core.Service;
 using FreelanceProject.infra.Service;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace FreelanceProject.API.Controllers
 {
@@ -15,6 +17,38 @@ namespace FreelanceProject.API.Controllers
         public HomePageController(IHomepageofService homepageofService)
         {
             this.homepageofService = homepageofService;
+        }
+
+        [Route("uploadImage")]
+        [HttpPost]
+        public Homepageof UploadIMage()
+        {
+            var file = Request.Form.Files[0];
+            var fileName = Guid.NewGuid().ToString() + "_" + file.FileName;
+            var fullPath = Path.Combine("Images", fileName);
+            using (var stream = new FileStream(fullPath, FileMode.Create))
+            {
+                file.CopyTo(stream);
+            }
+            Homepageof item = new Homepageof();
+            item.Logourl = fileName;
+            return item;
+        }
+
+        [Route("uploadImage2")]
+        [HttpPost]
+        public Homepageof UploadIMage2()
+        {
+            var file = Request.Form.Files[0];
+            var fileName = Guid.NewGuid().ToString() + "_" + file.FileName;
+            var fullPath = Path.Combine("Images", fileName);
+            using (var stream = new FileStream(fullPath, FileMode.Create))
+            {
+                file.CopyTo(stream);
+            }
+            Homepageof item = new Homepageof();
+            item.Imageurl = fileName;
+            return item;
         }
         [HttpGet]
         [Route("GetById/{id}")]
