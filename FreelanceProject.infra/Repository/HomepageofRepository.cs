@@ -58,8 +58,8 @@ namespace FreelanceProject.infra.Repository
 
             p.Add("FACEBOOKLINK", homepageof.Facebooklink, dbType: DbType.String, direction: ParameterDirection.Input);
             p.Add("INSTAGRAMLINK", homepageof.Instagramlink, dbType: DbType.String, direction: ParameterDirection.Input);
-            p.Add("TWITTER", homepageof.Twitter, dbType: DbType.Int32, direction: ParameterDirection.Input);
-            p.Add("WHATSAPP", homepageof.Whatsapp, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            p.Add("TWITTER", homepageof.Twitter, dbType: DbType.String, direction: ParameterDirection.Input);
+            p.Add("WHATSAPP", homepageof.Whatsapp, dbType: DbType.String, direction: ParameterDirection.Input);
             p.Add("PHONENUMBER", homepageof.Phonenumber, dbType: DbType.Int32, direction: ParameterDirection.Input);
 
             var result = dBContaxt.Connection.Execute("HOMEPAGEOF_package.insertHOMEPAGEOF", p, commandType: CommandType.StoredProcedure);
@@ -79,16 +79,16 @@ namespace FreelanceProject.infra.Repository
 
             p.Add("TEXTONE1", homepageof.Textone, dbType: DbType.String, direction: ParameterDirection.Input);
             p.Add("TEXTTWO1", homepageof.Texttwo, dbType: DbType.String, direction: ParameterDirection.Input);
-            p.Add("TEXTTHREE1", homepageof.Textthree, dbType: DbType.Int32, direction: ParameterDirection.Input);
-            p.Add("LOCATION1", homepageof.Location, dbType: DbType.Int32, direction: ParameterDirection.Input);
-            p.Add("PHONENUMBER1", homepageof.Phonenumber, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            p.Add("TEXTTHREE1", homepageof.Textthree, dbType: DbType.String, direction: ParameterDirection.Input);
+            p.Add("LOCATION1", homepageof.Location, dbType: DbType.String, direction: ParameterDirection.Input);
+            p.Add("PHONENUMBER1", homepageof.Phonenumber, dbType: DbType.String, direction: ParameterDirection.Input);
 
 
             p.Add("FACEBOOKLINK1", homepageof.Facebooklink, dbType: DbType.String, direction: ParameterDirection.Input);
             p.Add("INSTAGRAMLINK1", homepageof.Instagramlink, dbType: DbType.String, direction: ParameterDirection.Input);
-            p.Add("TWITTER1", homepageof.Twitter, dbType: DbType.Int32, direction: ParameterDirection.Input);
-            p.Add("WHATSAPP1", homepageof.Whatsapp, dbType: DbType.Int32, direction: ParameterDirection.Input);
-            p.Add("PHONENUMBER1", homepageof.Phonenumber, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            p.Add("TWITTER1", homepageof.Twitter, dbType: DbType.String, direction: ParameterDirection.Input);
+            p.Add("WHATSAPP1", homepageof.Whatsapp, dbType: DbType.String, direction: ParameterDirection.Input);
+            p.Add("PHONENUMBER1", homepageof.Phonenumber, dbType: DbType.String, direction: ParameterDirection.Input);
 
             var result = dBContaxt.Connection.Execute("HOMEPAGEOF_package.updateHOMEPAGEOF", p, commandType: CommandType.StoredProcedure);
         }

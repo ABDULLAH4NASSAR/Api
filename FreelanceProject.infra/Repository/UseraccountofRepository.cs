@@ -54,6 +54,7 @@ namespace FreelanceProject.infra.Repository
             p.Add("IMAGETWO", useraccountof.Imagetwo, dbType: DbType.String, direction: ParameterDirection.Input);
             p.Add("BIRTHDATE", useraccountof.Birthdate, dbType: DbType.DateTime, direction: ParameterDirection.Input);
             p.Add("id_login", useraccountof.Id_Login, dbType: DbType.Int64, direction: ParameterDirection.Input);
+            p.Add("id_bank", useraccountof.id_bank, dbType: DbType.Int64, direction: ParameterDirection.Input);
 
 
             var result = dBContaxt.Connection.Execute("USERACCOUNTOF_package.insertUSERACCOUNTOF", p, commandType: CommandType.StoredProcedure);
@@ -75,6 +76,8 @@ namespace FreelanceProject.infra.Repository
         p.Add("IMAGETWO1", useraccountof.Imagetwo, dbType: DbType.String, direction: ParameterDirection.Input);
         p.Add("BIRTHDATE1", useraccountof.Birthdate, dbType: DbType.DateTime, direction: ParameterDirection.Input);
         p.Add("id_login1", useraccountof.Id_Login, dbType: DbType.Int64, direction: ParameterDirection.Input);
+            p.Add("id_bank1", useraccountof.id_bank, dbType: DbType.Int64, direction: ParameterDirection.Input);
+
 
 
             var result = dBContaxt.Connection.Execute("USERACCOUNTOF_package.updateUSERACCOUNTOF", p, commandType: CommandType.StoredProcedure);

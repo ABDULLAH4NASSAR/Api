@@ -35,8 +35,12 @@ namespace FreelanceProject.Core.Data
         public string Resumee { get; set; }
         public decimal? Id_Cat { get; set; }
         public decimal? Id_Login { get; set; }
+        public decimal? id_bank { get; set; }
+
 
         public virtual Categoryof IdCatNavigation { get; set; }
+        public virtual Banckof Banckof { get; set; }
+
         public virtual Loginof IdLoginNavigation { get; set; }
         public virtual ICollection<Educationfreelanerof> Educationfreelanerofs { get; set; }
         public virtual ICollection<Experiencefreelanerof> Experiencefreelanerofs { get; set; }

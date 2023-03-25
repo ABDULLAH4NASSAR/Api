@@ -62,6 +62,7 @@ namespace FreelanceProject.infra.Repository
             p.Add("RESUMEE", freelanceraccountof.Resumee, dbType: DbType.String, direction: ParameterDirection.Input);
             p.Add("ID_CAT", freelanceraccountof.Id_Cat, dbType: DbType.Int32, direction: ParameterDirection.Input);
             p.Add("id_login", freelanceraccountof.Id_Login, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            p.Add("id_bank", freelanceraccountof.id_bank, dbType: DbType.Int32, direction: ParameterDirection.Input);
 
             var result = dBContaxt.Connection.Execute("FREELANCERACCOUNTOF_package.insertFREELANCERACCOUNTOF", p, commandType: CommandType.StoredProcedure);
         }
@@ -69,7 +70,7 @@ namespace FreelanceProject.infra.Repository
         public void update(Freelanceraccountof freelanceraccountof)
         {
             var p = new DynamicParameters();
-            p.Add("id1", freelanceraccountof.Id, dbType: DbType.String, direction: ParameterDirection.Input);
+            p.Add("id1", freelanceraccountof.Id, dbType: DbType.Int64, direction: ParameterDirection.Input);
 
             p.Add("FIRSTNAME1", freelanceraccountof.Firstname, dbType: DbType.String, direction: ParameterDirection.Input);
             p.Add("LASTNAME1", freelanceraccountof.Lastname, dbType: DbType.String, direction: ParameterDirection.Input);
@@ -91,6 +92,7 @@ namespace FreelanceProject.infra.Repository
             p.Add("RESUMEE1", freelanceraccountof.Resumee, dbType: DbType.String, direction: ParameterDirection.Input);
             p.Add("ID_CAT1", freelanceraccountof.Id_Cat, dbType: DbType.Int32, direction: ParameterDirection.Input);
             p.Add("id_login1", freelanceraccountof.Id_Login, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            p.Add("id_bank1", freelanceraccountof.id_bank, dbType: DbType.Int32, direction: ParameterDirection.Input);
 
             var result = dBContaxt.Connection.Execute("FREELANCERACCOUNTOF_package.updateFREELANCERACCOUNTOF", p, commandType: CommandType.StoredProcedure);
         }

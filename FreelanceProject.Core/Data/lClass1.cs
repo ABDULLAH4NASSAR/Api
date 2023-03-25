@@ -4,7 +4,9 @@ using System.Text;
 
 namespace FreelanceProject.Core.Data
 {
-    internal class lClass1
+    public class lClass1
     {
+        public int cardnumber { get; set; }
+        public int cvv { get; set; }
     }
 }

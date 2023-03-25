@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace FreelanceProject.API.Controllers
 {
@@ -38,7 +39,11 @@ namespace FreelanceProject.API.Controllers
         public Useraccountof GetById(int id) { return useraccountofService.GetById(id); }
         [HttpGet]
         [Route("GetAll")]
-        public List<Useraccountof> GetAll() { return useraccountofService.GetAll(); }
+        public List<Useraccountof> GetAll() {
+            return useraccountofService.GetAll();
+        
+        
+        }
         [HttpDelete]
         [Route("delete/{id}")]
         public void delete(int id) { useraccountofService.delete(id); }

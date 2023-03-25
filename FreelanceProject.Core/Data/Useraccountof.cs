@@ -25,6 +25,7 @@ namespace FreelanceProject.Core.Data
         public string Imagetwo { get; set; }
         public DateTime? Birthdate { get; set; }
         public decimal? Id_Login { get; set; }
+        public decimal? id_bank { get; set; }
 
         public virtual Loginof IdLoginNavigation { get; set; }
         public virtual ICollection<Paymentmethodof> Paymentmethodofs { get; set; }

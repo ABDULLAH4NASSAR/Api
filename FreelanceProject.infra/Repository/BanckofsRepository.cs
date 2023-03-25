@@ -39,26 +39,37 @@ namespace FreelanceProject.infra.Repository
             return result.FirstOrDefault();
         }
 
-        public void insert(Banckof banckof)
+        public Banckof authbank(Banckof banckof)
         {
             var p = new DynamicParameters();
-            p.Add("CARDNUMBER", banckof.Cardnumber, dbType: DbType.String, direction: ParameterDirection.Input);
-            p.Add("CARDHOLDERNAME", banckof.Cardholdername, dbType: DbType.String, direction: ParameterDirection.Input);
-            p.Add("cvv", banckof.Cvv, dbType: DbType.String, direction: ParameterDirection.Input);
-            p.Add("AMOUNT", banckof.Amount, dbType: DbType.String, direction: ParameterDirection.Input);
+            p.Add("CARDNUMBER1", banckof.Cardnumber, dbType: DbType.Int64, direction: ParameterDirection.Input);
+            p.Add("cvv1", banckof.Cvv, dbType: DbType.Int64, direction: ParameterDirection.Input);
+
+            var result = dBContaxt.Connection.Query<Banckof>("BANKOF_package.authbank", p, commandType: CommandType.StoredProcedure);
+            return result.FirstOrDefault();
+        }
+
+        public int insert(Banckof banckof)
+        {
+            var p = new DynamicParameters();
+            p.Add("CARDNUMBER1", banckof.Cardnumber, dbType: DbType.Int64, direction: ParameterDirection.Input);
+            p.Add("CARDHOLDERNAME1", banckof.Cardholdername, dbType: DbType.String, direction: ParameterDirection.Input);
+            p.Add("cvv1", banckof.Cvv, dbType: DbType.Int64, direction: ParameterDirection.Input);
+            p.Add("AMOUNT", banckof.Amount, dbType: DbType.Int64, direction: ParameterDirection.Input);
             p.Add("EXPIRYDATE", banckof.Expirydate, dbType: DbType.DateTime, direction: ParameterDirection.Input);
 
-            var result = dBContaxt.Connection.Execute("BANKOF_package.insertBANKOF", p, commandType: CommandType.StoredProcedure);
+            var result = dBContaxt.Connection.Query<int>("BANKOF_package.insertBANKOF", p, commandType: CommandType.StoredProcedure);
+            return result.FirstOrDefault();
         }
 
         public void update(Banckof banckof)
         {
             var p = new DynamicParameters();
             p.Add("id1", banckof.Id, dbType: DbType.Int64, direction: ParameterDirection.Input);
-            p.Add("CARDNUMBER1", banckof.Cardnumber, dbType: DbType.String, direction: ParameterDirection.Input);
+            p.Add("CARDNUMBER1", banckof.Cardnumber, dbType: DbType.Int64, direction: ParameterDirection.Input);
             p.Add("CARDHOLDERNAME1", banckof.Cardholdername, dbType: DbType.String, direction: ParameterDirection.Input);
-            p.Add("cvv1", banckof.Cvv, dbType: DbType.String, direction: ParameterDirection.Input);
-            p.Add("AMOUNT1", banckof.Amount, dbType: DbType.String, direction: ParameterDirection.Input);
+            p.Add("cvv1", banckof.Cvv, dbType: DbType.Int64, direction: ParameterDirection.Input);
+            p.Add("AMOUNT1", banckof.Amount, dbType: DbType.Int64, direction: ParameterDirection.Input);
             p.Add("EXPIRYDATE1", banckof.Expirydate, dbType: DbType.DateTime, direction: ParameterDirection.Input);
 
             var result = dBContaxt.Connection.Execute("BANKOF_package.updateBANKOF", p, commandType: CommandType.StoredProcedure);

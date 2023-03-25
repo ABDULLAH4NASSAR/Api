@@ -15,6 +15,11 @@ namespace FreelanceProject.infra.Service
             this.banckofsRepository = banckofsRepository;
         }
 
+        public Banckof authbank(Banckof banckof)
+        {
+            return banckofsRepository.authbank(banckof);
+        }
+
         public void delete(int id)
         {
            banckofsRepository.delete(id);
@@ -31,9 +36,9 @@ namespace FreelanceProject.infra.Service
             return banckofsRepository.GetById(id);
         }
 
-        public void insert(Banckof banckof)
+        public int insert(Banckof banckof)
         {
-            banckofsRepository.insert(banckof);
+            return banckofsRepository.insert(banckof);
         }
 
         public void update(Banckof banckof)
